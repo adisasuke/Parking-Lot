@@ -75,6 +75,7 @@ public class IssueTicketService {
         ParkingLot parkingLot = parkingLotRepository.findByGate(readGate);
 
         Spot spot = random.assignSpot(parkingLot, vehicle);
+        spot.setSpotstatus(SPOTSTATUS.FILLED);
         if(spot == null)
         {
             throw new NoFreeSpace();

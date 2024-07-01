@@ -4,6 +4,16 @@ import java.util.*;
 public class ParkingLot extends BaseModel{
 
     private List<Gate> gates;
+    private List<ParkingFloor> parkingFloors;
+    private List<VEHICLETYPE> vehicletypes;
+
+    public ParkingLot(List<Gate> gates, List<VEHICLETYPE> vehicletypes, List<ParkingFloor> parkingFloors) {
+        this.gates = gates;
+        this.vehicletypes = vehicletypes;
+        this.parkingFloors = parkingFloors;
+    }
+
+
 
     public List<ParkingFloor> getParkingFloors() {
         return parkingFloors;
@@ -28,9 +38,4 @@ public class ParkingLot extends BaseModel{
     public void setVehicletypes(List<VEHICLETYPE> vehicletypes) {
         this.vehicletypes = vehicletypes;
     }
-
-    private List<ParkingFloor> parkingFloors;
-    private List<VEHICLETYPE> vehicletypes;
-
-
 }

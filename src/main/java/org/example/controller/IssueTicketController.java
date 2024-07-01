@@ -35,6 +35,7 @@ public class IssueTicketController {
         }
         catch (Exception e) {
             System.out.println("Issue Ticket Error");
+            System.out.println(e);
             responseDtoIssueTicket.setIssueticketresponsestatus(ISSUETICKETRESPONSESTATUS.FAILURE);
             return responseDtoIssueTicket;
         }

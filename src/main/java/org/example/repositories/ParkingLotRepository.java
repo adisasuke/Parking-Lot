@@ -9,6 +9,7 @@ import java.util.Map;
 public class ParkingLotRepository {
 
     private Map<Long, ParkingLot> parkingLots = new HashMap<>();
+    private int id = 0;
 
     public ParkingLot findByGate(Gate gate) {
         for(ParkingLot parkingLot: parkingLots.values()) {
@@ -20,5 +21,11 @@ public class ParkingLotRepository {
         return null;
     }
 
+    public ParkingLot save(ParkingLot parkingLot) {
+        id++;
+        parkingLot.setId(id);
+        parkingLots.put(parkingLot.getId(), parkingLot);
+        return parkingLot;
+    }
 
 }
