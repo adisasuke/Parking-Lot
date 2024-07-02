@@ -30,6 +30,7 @@ public class IssueTicketController {
 
         ResponseDtoIssueTicket responseDtoIssueTicket = new ResponseDtoIssueTicket();
         Ticket ticket;
+
         try {
             ticket = issueTicketService.issueTicket(vechicleNumber, vehicleType, ownerName, gateId);
         }

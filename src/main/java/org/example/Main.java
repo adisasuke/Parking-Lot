@@ -117,6 +117,7 @@ public class Main {
         if(responseDtoIssueTicket.getIssueticketresponsestatus()!=ISSUETICKETRESPONSESTATUS.FAILURE)
         {
             System.out.println("Ticket Issue");
+            System.out.println("Owner of Ticket " + responseDtoIssueTicket.getTicket().getVehicle().getOwnerName());
             System.out.println("Operator is : " + responseDtoIssueTicket.getTicket().getOperator().getName());
         }
         else
